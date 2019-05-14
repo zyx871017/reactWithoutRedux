@@ -1,0 +1,11 @@
+.headerExtension {
+    height: 60px;
+    background-color: #20232a;
+}
+
+.headerContent {
+    width: 1260px;
+    height: 60px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

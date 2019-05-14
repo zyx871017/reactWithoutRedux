@@ -4,17 +4,19 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: './src/app.js',
-        vendor: ['react', 'react-dom', 'react-router']
+        main: './src/app.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash:8].js',
-        publicPath: './dist/'
+        filename: '[name].[chunkhash:8].js'
     },
 
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader'
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -32,17 +34,39 @@ module.exports = {
                 use: [
                     'file-loader'
                 ]
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+                    }
+                ]
             }
         ]
     },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
     plugins: [
-        new HtmlWebpackPlugin({template: './index.html'}),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor'
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest'
-        })
-    ]
+        new HtmlWebpackPlugin({template: './index.html'})
+    ],
+    resolve: {
+        alias: {
+            component: path.resolve(__dirname, './../src/component/'),
+        }
+    }
 };
 

@@ -1,2 +1,5 @@
 import ReactDOM from 'react-dom';
-import {Router, Route, Switch, Redirect} from 'react-router-dom';
+import React from 'react';
+import Loading from 'component/Loading';
+
+ReactDOM.render(<Loading/>, document.getElementById('root'));

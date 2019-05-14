@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/zyx871017/reactWithoutRedux#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "history": "^4.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

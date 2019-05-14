@@ -1,0 +1,43 @@
+{
+  "name": "reactwithoutredux",
+  "version": "1.0.0",
+  "description": "react template without redux",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyx871017/reactWithoutRedux.git"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "zyx_cli"
+  ],
+  "author": "zhaoyuxiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyx871017/reactWithoutRedux/issues"
+  },
+  "homepage": "https://github.com/zyx871017/reactWithoutRedux#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}

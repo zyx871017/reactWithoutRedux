@@ -45,6 +45,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.svg$/i,
+                use: ['@svgr/webpack', 'url-loader']
             }
         ]
     },
@@ -66,6 +70,8 @@ module.exports = {
     resolve: {
         alias: {
             component: path.resolve(__dirname, './../src/component/'),
+            page: path.resolve(__dirname, './../src/page/'),
+            static: path.resolve(__dirname, './../src/static')
         }
     }
 };
